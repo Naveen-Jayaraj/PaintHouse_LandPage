@@ -390,6 +390,10 @@ h6 {
     width: 100%;
 }
 
+.nav-mobile-cta {
+    display: none;
+}
+
 .header-actions {
     display: flex;
     align-items: center;
@@ -1821,16 +1825,39 @@ h6 {
     }
 }
 
-/* 16. RESPONSIVE BREAKPOINTS (Mobile & Tablet Support) */
+/* 16. RESPONSIVE BREAKPOINTS (Mobile, Tablet & iPad Optimization) */
 @media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .header-cta-btn {
+        display: none !important;
+    }
+
+    .mobile-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-sm);
+        background: rgba(26, 37, 86, 0.05);
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2.5rem;
         text-align: center;
     }
 
+    .badge-pill {
+        margin: 0 auto 1.2rem auto;
+    }
+
     .hero-subtitle {
-        margin: 0 auto 2rem auto;
+        margin: 0 auto 1.8rem auto;
+        max-width: 100%;
     }
 
     .hero-buttons {
@@ -1843,53 +1870,80 @@ h6 {
 
     .about-container {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .about-highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
     }
 
     .calc-card-wrapper {
-        padding: 2.5rem 1.8rem;
+        padding: 2.5rem 2rem;
     }
 
     .calc-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
     }
 
     .contact-card-layout {
         grid-template-columns: 1fr;
-        padding: 2.5rem 1.8rem;
+        padding: 2.5rem 2rem;
         gap: 2.5rem;
     }
 
     .footer-container {
         grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
     }
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1.2rem;
+    }
+
     .top-bar {
         display: none !important;
     }
 
-    .mobile-toggle {
-        display: block;
+    .navbar-header {
+        padding: 0.2rem 0;
     }
 
     .navbar-logo-img {
-        height: 42px;
-        max-width: 160px;
+        height: 38px;
+        max-width: 140px;
+    }
+
+    /* Clean mobile header bar: hide heavy header button, move CTA inside drawer */
+    .header-cta-btn {
+        display: none !important;
+    }
+
+    .mobile-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-sm);
+        background: rgba(26, 37, 86, 0.05);
     }
 
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 65px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 65px);
         background: #FFFFFF;
         flex-direction: column;
         justify-content: flex-start;
-        padding: 2.5rem 1.8rem;
-        gap: 1.2rem;
+        align-items: center;
+        padding: 2rem 1.5rem;
+        gap: 1rem;
         transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: var(--shadow-lg);
         overflow-y: auto;
@@ -1900,165 +1954,214 @@ h6 {
     }
 
     .nav-link {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         width: 100%;
         text-align: center;
-        padding: 0.7rem 0;
+        padding: 0.75rem 0;
         border-bottom: 1px solid var(--border-light);
     }
 
+    .nav-mobile-cta {
+        display: inline-flex !important;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    /* Section Spacing & Titles */
+    .hero-section {
+        padding: 3rem 0 3.5rem 0;
+    }
+
+    .services-section,
+    .about-section,
+    .projects-section,
+    .calculator-section,
+    .why-section,
+    .contact-section {
+        padding: 3.5rem 0;
+    }
+
+    .section-title {
+        font-size: clamp(1.6rem, 5vw, 2.2rem);
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 1.8rem;
+    }
+
     .hero-title {
-        font-size: 2.3rem;
+        font-size: clamp(1.85rem, 6vw, 2.6rem);
     }
 
     .image-wrapper {
-        height: 340px;
+        height: 300px;
     }
 
-    .float-1 {
-        top: 10px;
-        right: 10px;
-    }
-
+    /* Mobile Floating Badge row instead of overlapping absolutely */
+    .float-1,
     .float-2 {
-        bottom: 10px;
-        left: 10px;
+        position: relative !important;
+        top: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        animation: none !important;
+        width: 100%;
+        margin-top: 0.8rem;
+        box-sizing: border-box;
     }
 
-    .stat-divider {
-        display: none;
-    }
-
-    /* Sideways Horizontal Touch Scroll Tracks for Mobile */
+    /* Responsive Grid Layouts without Horizontal Scrollbars */
     .stats-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        gap: 1.5rem;
-        padding: 0.5rem;
-        scrollbar-width: none;
-    }
-
-    .stats-container::-webkit-scrollbar {
-        display: none;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.2rem !important;
+        padding: 0 !important;
+        overflow: visible !important;
     }
 
     .stat-card {
-        flex: 0 0 auto;
-        scroll-snap-align: start;
+        background: rgba(255, 255, 255, 0.06);
+        padding: 1rem;
+        border-radius: var(--radius-md);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
+    .stat-icon-wrap {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+
+    .stat-divider {
+        display: none !important;
+    }
+
+    /* About Section Visual Stack */
+    .main-img-box {
+        width: 100%;
+    }
+
+    .sub-img-box {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        margin-top: 1rem;
+        border: none;
+    }
+
+    .about-highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Services Responsive Grid */
     .services-grid {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        gap: 1.2rem;
-        padding: 0.5rem 0.5rem 1.2rem 0.5rem;
-        margin-top: 1.5rem;
-        scrollbar-width: none;
-    }
-
-    .services-grid::-webkit-scrollbar {
-        display: none;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.2rem !important;
+        margin-top: 1.8rem !important;
+        padding: 0 !important;
+        overflow: visible !important;
     }
 
     .service-card {
-        flex: 0 0 85% !important;
-        max-width: 330px !important;
-        scroll-snap-align: center;
-        margin-bottom: 0;
+        flex: none !important;
+        max-width: 100% !important;
+        padding: 1.5rem !important;
     }
 
+    /* Projects Portfolio Responsive Grid */
     .portfolio-filter-bar {
         display: flex !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        justify-content: flex-start;
-        gap: 0.6rem;
-        padding-bottom: 0.8rem;
-        margin-bottom: 1.8rem;
-        scrollbar-width: none;
-    }
-
-    .portfolio-filter-bar::-webkit-scrollbar {
-        display: none;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+        overflow: visible !important;
+        margin-bottom: 2rem !important;
     }
 
     .filter-btn {
-        flex: 0 0 auto !important;
-        white-space: nowrap;
-        scroll-snap-align: start;
+        flex: none !important;
+        padding: 0.5rem 1rem !important;
+        font-size: 0.85rem !important;
     }
 
     .projects-grid {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        gap: 1.2rem;
-        padding: 0.5rem 0.5rem 1.2rem 0.5rem;
-        scrollbar-width: none;
-    }
-
-    .projects-grid::-webkit-scrollbar {
-        display: none;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        padding: 0 !important;
+        overflow: visible !important;
     }
 
     .project-card {
-        flex: 0 0 85% !important;
-        max-width: 310px !important;
-        scroll-snap-align: center;
+        flex: none !important;
+        max-width: 100% !important;
     }
 
+    .project-img-wrapper {
+        height: 210px;
+    }
+
+    /* Features Responsive Grid */
     .features-grid {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        gap: 1.2rem;
-        padding: 0.5rem 0.5rem 1.2rem 0.5rem;
-        scrollbar-width: none;
-    }
-
-    .features-grid::-webkit-scrollbar {
-        display: none;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+        margin-top: 1.8rem !important;
+        padding: 0 !important;
+        overflow: visible !important;
     }
 
     .feature-box {
-        flex: 0 0 82% !important;
-        max-width: 290px !important;
-        scroll-snap-align: center;
+        flex: none !important;
+        max-width: 100% !important;
+        padding: 1.2rem 1rem !important;
     }
 
+    .feature-icon {
+        width: 54px;
+        height: 54px;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Calculator & Contact Card Padding */
     .calc-card-wrapper {
-        padding: 1.8rem 1.2rem;
+        padding: 1.5rem 1.2rem;
+        border-radius: var(--radius-md);
     }
 
     .calc-results-box {
-        padding: 1.8rem 1.2rem;
+        padding: 1.5rem 1.2rem;
     }
 
     .metric-val {
-        font-size: clamp(1.3rem, 5vw, 2rem);
-        word-break: break-word;
+        font-size: clamp(1.3rem, 5vw, 1.8rem);
     }
 
     .contact-card-layout {
-        padding: 1.8rem 1.2rem;
+        padding: 1.5rem 1.2rem;
         border-radius: var(--radius-md);
     }
 
     .contact-form-panel {
-        padding: 1.8rem 1.2rem;
+        padding: 1.5rem 1.2rem;
     }
 
     .modal-body {
@@ -2066,27 +2169,23 @@ h6 {
     }
 
     .modal-img-box {
-        height: 250px;
+        height: 220px;
     }
 
     .form-row {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .footer-container {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 2rem;
     }
 
     .toast-container {
         left: 15px;
         right: 15px;
         bottom: 15px;
-    }
-
-    .toast {
-        width: 100%;
-        font-size: 0.9rem;
     }
 }
 
@@ -2095,161 +2194,66 @@ h6 {
         padding: 0 1rem;
     }
 
-    .navbar-logo-img {
-        height: 38px;
-        max-width: 135px;
-    }
-
-    .header-actions {
-        gap: 0.5rem;
-    }
-
-    .header-actions .btn {
-        padding: 0.5rem 0.9rem;
-        font-size: 0.82rem;
-    }
-
     .hero-title {
-        font-size: 1.95rem;
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
     }
 
     .hero-buttons {
         flex-direction: column;
         width: 100%;
+        gap: 0.8rem;
     }
 
     .hero-buttons .btn {
         width: 100%;
     }
 
-    .hero-trust-badges {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-    }
-
-    .filter-btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.85rem;
+    .features-grid {
+        grid-template-columns: 1fr !important;
     }
 
     .calc-card-wrapper {
-        padding: 1.25rem 0.85rem;
-        border-radius: var(--radius-md);
-    }
-
-    .calc-header {
-        margin-bottom: 1.5rem;
-    }
-
-    .calc-header h2 {
-        font-size: 1.5rem;
-    }
-
-    .calc-header p {
-        font-size: 0.9rem;
-    }
-
-    .form-group {
-        margin-bottom: 1rem;
-    }
-
-    .form-group label {
-        font-size: 0.88rem;
-        margin-bottom: 0.35rem;
-    }
-
-    .form-group input,
-    .form-group select {
-        padding: 0.75rem 0.8rem;
-        font-size: 0.9rem;
-    }
-
-    .form-group select {
-        padding-right: 2.2rem;
+        padding: 1.25rem 0.9rem;
     }
 
     .calc-results-box {
-        padding: 1.25rem 0.85rem;
-    }
-
-    .calc-results-box h3 {
-        font-size: 1.25rem;
-        margin-bottom: 1.2rem;
+        padding: 1.25rem 0.9rem;
     }
 
     .contact-card-layout {
-        padding: 1.25rem 0.85rem;
+        padding: 1.25rem 0.9rem;
     }
 
     .contact-form-panel {
-        padding: 1.25rem 0.85rem;
-    }
-
-    .contact-form-panel h3 {
-        font-size: 1.35rem;
-    }
-
-    .contact-form-panel p {
-        font-size: 0.88rem;
-        margin-bottom: 1.2rem;
-    }
-
-    .map-card-header {
-        padding: 0.6rem 0.75rem;
-        font-size: 0.8rem;
-    }
-
-    .info-item {
-        gap: 0.8rem;
-    }
-
-    .item-icon-wrap {
-        width: 38px;
-        height: 38px;
-        font-size: 1rem;
+        padding: 1.25rem 0.9rem;
     }
 
     .map-frame-wrapper {
-        height: 220px;
+        height: 200px;
     }
 }
 
 @media (max-width: 380px) {
     .container {
-        padding: 0 0.65rem;
+        padding: 0 0.75rem;
     }
 
-    .calc-card-wrapper {
-        padding: 1rem 0.6rem;
+    .calc-card-wrapper,
+    .calc-results-box,
+    .contact-card-layout,
+    .contact-form-panel {
+        padding: 1rem 0.75rem;
     }
 
-    .calc-results-box {
-        padding: 1rem 0.6rem;
+    .stat-number {
+        font-size: 1.5rem;
     }
 
     .metric-val {
         font-size: 1.2rem;
-    }
-
-    .header-actions .btn {
-        padding: 0.4rem 0.65rem;
-        font-size: 0.78rem;
-    }
-
-    .contact-card-layout {
-        padding: 0.85rem 0.5rem;
-    }
-
-    .contact-form-panel {
-        padding: 0.85rem 0.5rem;
-    }
-
-    .map-card-header {
-        padding: 0.5rem 0.5rem;
-    }
-
-    .map-frame-wrapper {
-        height: 180px;
     }
 }
