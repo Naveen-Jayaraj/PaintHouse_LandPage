@@ -885,6 +885,20 @@
                         </div>
                     </div>
 
+                    <!-- Embedded Google Map Box -->
+                    <div class="map-card-box">
+                        <div class="map-card-header">
+                            <span><i class="fa-solid fa-map-location-dot"></i> Store Location — Calicut</span>
+                            <a href="https://maps.google.com/?q=Paint+House+Calicut" target="_blank" rel="noopener" class="map-open-link" title="Open in Google Maps">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Maps
+                            </a>
+                        </div>
+                        <div class="map-frame-wrapper">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.040052198917!2d75.78166!3d11.258464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6593788d5f9ab%3A0x29664ce7d888027c!2sPaint%20House!5e0!3m2!1sen!2sin!4v1788526236057!5m2!1sen!2sin"
+                                class="google-map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Paint House Calicut Google Maps Location"></iframe>
+                        </div>
+                    </div>
+
                     <div class="social-links-box">
                         <span>Connect With Us:</span>
                         <div class="social-icons">
@@ -905,24 +919,24 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="fullName">Your Name *</label>
-                                <input type="text" id="fullName" placeholder="e.g. Rahul Sharma" required>
+                                <input type="text" id="fullName" name="Full Name" placeholder="e.g. Rahul Sharma" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="phoneNum">Phone Number *</label>
-                                <input type="tel" id="phoneNum" placeholder="e.g. 9876543210" required>
+                                <input type="tel" id="phoneNum" name="Phone Number" placeholder="e.g. 9876543210" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="emailAddr">Email Address</label>
-                                <input type="email" id="emailAddr" placeholder="e.g. name@example.com">
+                                <input type="email" id="emailAddr" name="Email" placeholder="e.g. name@example.com">
                             </div>
 
                             <div class="form-group">
                                 <label for="serviceType">Service Required *</label>
-                                <select id="serviceType" required>
+                                <select id="serviceType" name="Service Required" required>
                                     <option value="" disabled selected>Select a Service</option>
                                     <option value="Residential Interior">Residential Interior Painting</option>
                                     <option value="Exterior Painting">Exterior Weatherproofing</option>
@@ -935,13 +949,13 @@
 
                         <div class="form-group">
                             <label for="projectLoc">Project Location / City *</label>
-                            <input type="text" id="projectLoc" placeholder="e.g. Calicut, Kozhikode, Ernakulam..."
+                            <input type="text" id="projectLoc" name="Project Location" placeholder="e.g. Calicut, Kozhikode, Ernakulam..."
                                 required>
                         </div>
 
                         <div class="form-group">
                             <label for="messageText">Project Details or Requirements</label>
-                            <textarea id="messageText" rows="4"
+                            <textarea id="messageText" name="Project Details" rows="4"
                                 placeholder="Tell us about your project area (sq. ft.), expected completion time, or any specific color choices..."></textarea>
                         </div>
 

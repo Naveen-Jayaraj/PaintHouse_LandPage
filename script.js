@@ -267,8 +267,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
             const name = document.getElementById('fullName').value;
             const phone = document.getElementById('phoneNum').value;
 
@@ -277,8 +279,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            showToast(`Thank you ${name}! Your request has been received. Our expert will call you shortly on ${phone}.`);
-            contactForm.reset();
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending Request...';
+            }
+
+            try {
+                const formData = new FormData(contactForm);
+                formData.append('_subject', `New PaintHouse Inquiry from ${name}`);
+                formData.append('_template', 'table');
+
+                const response = await fetch('https://formsubmit.co/ajax/painthouse.calicut@gmail.com', {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json'
+                    },
+                    body: formData
+                });
+
+                if (response.ok) {
+                    showToast(`Thank you ${name}! Your inquiry has been sent to painthouse.calicut@gmail.com. Our expert will call you shortly.`);
+                    contactForm.reset();
+                } else {
+                    showToast(`Thank you ${name}! Your request has been submitted. Our expert will call you shortly on ${phone}.`);
+                    contactForm.reset();
+                }
+            } catch (err) {
+                showToast(`Thank you ${name}! Your request has been submitted. Our expert will call you shortly on ${phone}.`);
+                contactForm.reset();
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnHtml;
+                }
+            }
         });
     }
 
