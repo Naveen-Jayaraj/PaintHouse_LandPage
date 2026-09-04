@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             projectCards.forEach(card => {
                 const categories = card.getAttribute('data-category').split(' ');
                 if (filterValue === 'all' || categories.includes(filterValue)) {
-                    card.style.display = 'block';
+                    card.style.display = '';
                     setTimeout(() => {
                         card.style.opacity = '1';
                         card.style.transform = 'scale(1)';
