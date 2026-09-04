@@ -96,61 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', animateStats);
     animateStats(); // Run check on load
 
-    // 4. Interactive Color Visualizer State Manager
-    const targetWall = document.getElementById('targetWall');
-    const colorSwatchBtns = document.querySelectorAll('.color-swatch-btn');
-    const currentSwatch = document.getElementById('currentSwatch');
-    const currentColorName = document.getElementById('currentColorName');
-    const customColorPicker = document.getElementById('customColorPicker');
-    const customHexText = document.getElementById('customHexText');
-
-    function updateWallColor(hexColor, nameText = 'Custom Shade') {
-        if (targetWall) {
-            targetWall.style.fill = hexColor;
-        }
-        if (currentSwatch) {
-            currentSwatch.style.backgroundColor = hexColor;
-        }
-        if (currentColorName) {
-            currentColorName.innerText = `${nameText} (${hexColor.toUpperCase()})`;
-        }
-        if (customColorPicker) {
-            customColorPicker.value = hexColor;
-        }
-        if (customHexText) {
-            customHexText.value = hexColor.toUpperCase();
-        }
-    }
-
-    colorSwatchBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            colorSwatchBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const color = btn.getAttribute('data-color');
-            const name = btn.getAttribute('data-name');
-            updateWallColor(color, name);
-        });
-    });
-
-    if (customColorPicker) {
-        customColorPicker.addEventListener('input', (e) => {
-            colorSwatchBtns.forEach(b => b.classList.remove('active'));
-            updateWallColor(e.target.value, 'Custom Picker');
-        });
-    }
-
-    if (customHexText) {
-        customHexText.addEventListener('change', (e) => {
-            let val = e.target.value.trim();
-            if (!val.startsWith('#')) val = '#' + val;
-            if (/^#[0-9A-F]{6}$/i.test(val)) {
-                colorSwatchBtns.forEach(b => b.classList.remove('active'));
-                updateWallColor(val, 'Custom Hex');
-            }
-        });
-    }
-
     // 5. Portfolio Category Filter Logic
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
@@ -251,29 +196,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalLitersMax = Math.ceil(areaSqFt / (coveragePerLiter * 0.95));
 
         // Cost per sq.ft range (includes paint + prep + expert labor)
-        let ratePerSqFtMin = 15;
-        let ratePerSqFtMax = 22;
+        let ratePerSqFtMin = 250;
+        let ratePerSqFtMax = 300;
 
         switch (serviceType) {
             case 'interior_standard':
-                ratePerSqFtMin = 14;
-                ratePerSqFtMax = 20;
-                break;
-            case 'interior_royale':
-                ratePerSqFtMin = 22;
-                ratePerSqFtMax = 32;
+                ratePerSqFtMin = 250;
+                ratePerSqFtMax = 275;
                 break;
             case 'exterior_weather':
-                ratePerSqFtMin = 18;
-                ratePerSqFtMax = 26;
+                ratePerSqFtMin = 265;
+                ratePerSqFtMax = 285;
+                break;
+            case 'interior_royale':
+                ratePerSqFtMin = 275;
+                ratePerSqFtMax = 295;
                 break;
             case 'waterproofing':
-                ratePerSqFtMin = 25;
-                ratePerSqFtMax = 38;
+                ratePerSqFtMin = 285;
+                ratePerSqFtMax = 300;
                 break;
             case 'texture':
-                ratePerSqFtMin = 35;
-                ratePerSqFtMax = 65;
+                ratePerSqFtMin = 300;
+                ratePerSqFtMax = 350;
                 break;
         }
 
