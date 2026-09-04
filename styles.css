@@ -798,21 +798,47 @@ h6 {
     object-fit: cover;
 }
 
+/* Section Tags & Visual Dividers */
 .section-tag {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: var(--accent-red);
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    padding: 0.35rem 0.95rem;
+    background: rgba(225, 29, 72, 0.08);
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(225, 29, 72, 0.15);
 }
 
 .light-tag {
     color: var(--accent-gold) !important;
+    background: rgba(217, 119, 6, 0.15) !important;
+    border-color: rgba(217, 119, 6, 0.3) !important;
+}
+
+.section-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(226, 232, 240, 0.9) 15%, rgba(225, 29, 72, 0.35) 50%, rgba(226, 232, 240, 0.9) 85%, transparent 100%);
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.section-tint {
+    background-color: #F1F5F9 !important;
+    border-top: 1px solid rgba(226, 232, 240, 0.9);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.section-white {
+    background-color: #FFFFFF !important;
 }
 
 .section-title {
@@ -930,10 +956,7 @@ h6 {
     border-color: rgba(225, 29, 72, 0.3);
 }
 
-.highlight-card {
-    border: 2px solid var(--accent-red);
-    box-shadow: var(--shadow-md);
-}
+
 
 .card-icon-box {
     width: 60px;
