@@ -170,6 +170,8 @@ h6 {
     transition: var(--transition-normal);
     text-align: center;
     white-space: nowrap;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .btn-primary {
@@ -1993,6 +1995,20 @@ h6 {
         margin-top: 1rem;
     }
 
+    /* Responsive Button Wrappers & Text Scaling */
+    .btn {
+        white-space: normal;
+        word-break: break-word;
+        max-width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .btn-lg {
+        padding: 0.85rem 1.4rem;
+        font-size: 0.98rem;
+    }
+
     /* Section Spacing & Titles */
     .hero-section {
         padding: 3rem 0 3.5rem 0;
@@ -2220,6 +2236,27 @@ h6 {
         padding: 0 1rem;
     }
 
+    .btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-lg {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+        width: 100%;
+    }
+
+    .calc-cta-group {
+        flex-direction: column !important;
+        width: 100%;
+    }
+
+    .calc-cta-group .btn {
+        width: 100%;
+    }
+
     .hero-title {
         font-size: 1.8rem;
     }
@@ -2266,6 +2303,18 @@ h6 {
 @media (max-width: 380px) {
     .container {
         padding: 0 0.75rem;
+    }
+
+    .btn {
+        padding: 0.7rem 0.85rem;
+        font-size: 0.88rem;
+        width: 100%;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 0.9rem;
+        font-size: 0.9rem;
+        width: 100%;
     }
 
     .calc-card-wrapper,
