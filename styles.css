@@ -409,6 +409,32 @@ h6 {
     cursor: pointer;
 }
 
+/* Subpage Banner Header */
+.subpage-banner {
+    background: linear-gradient(135deg, #1A2556 0%, #0D1430 100%);
+    color: var(--text-white);
+    padding: 4rem 0 4.5rem 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 4px solid var(--accent-red);
+}
+
+.subpage-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: #FFFFFF;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.5px;
+}
+
+.subpage-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    color: rgba(255, 255, 255, 0.82);
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
 /* 5. HERO SECTION */
 .hero-section {
     position: relative;

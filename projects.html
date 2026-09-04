@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="PaintHouse Portfolio - Explore landmark residential, commercial, hospital, religious, and hospitality painting contracts completed by PaintHouse contractors since 1960.">
+    <title>Our Works & Landmark Projects | PaintHouse Painting Contractors</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-info">
+                <span><i class="fa-solid fa-award"></i> Award-Winning Painting Contractors Since 1960</span>
+                <span><i class="fa-solid fa-location-dot"></i> Mavoor Road, Calicut, Kerala</span>
+            </div>
+            <div class="top-contact">
+                <a href="tel:9447710510"><i class="fa-solid fa-phone"></i> +91 944 771 0510</a>
+                <a href="tel:7012467993"><i class="fa-solid fa-mobile-screen"></i> +91 701 246 7993</a>
+                <a href="mailto:painthouse.calicut@gmail.com"><i class="fa-solid fa-envelope"></i>
+                    painthouse.calicut@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header Navigation -->
+    <header class="navbar-header" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="brand-logo" aria-label="PaintHouse Painting Contractors">
+                <img src="images/logo.png" alt="PaintHouse Painting Contractors Logo" class="navbar-logo-img">
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services & Calculator</a>
+                <a href="projects.html" class="nav-link active">Our Works</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="contact.html" class="btn btn-primary nav-mobile-cta">
+                    <i class="fa-solid fa-paint-roller"></i> Get Free Quote
+                </a>
+            </nav>
+
+            <!-- Header Action CTA -->
+            <div class="header-actions">
+                <a href="contact.html" class="btn btn-primary btn-glow header-cta-btn">
+                    <i class="fa-solid fa-paint-roller"></i> Get Free Quote
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SUBPAGE HERO BANNER -->
+    <section class="subpage-banner">
+        <div class="container text-center">
+            <div class="section-tag light-tag" style="justify-content: center;">
+                <i class="fa-solid fa-building"></i> PORTFOLIO OF EXCELLENCE
+            </div>
+            <h1 class="subpage-title">OUR LANDMARK PROJECTS</h1>
+            <p class="subpage-subtitle">
+                Delivering Excellence Across Residential, Commercial, Institutional & Industrial Spaces Since 1960.
+            </p>
+        </div>
+    </section>
+
+    <!-- OUR PROJECTS SECTION -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <!-- Portfolio Filter Buttons -->
+            <div class="portfolio-filter-bar">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="commercial">Commercial & Corporate</button>
+                <button class="filter-btn" data-filter="institutional">Institutional & Civic</button>
+                <button class="filter-btn" data-filter="residential">Residential & Villas</button>
+                <button class="filter-btn" data-filter="hospitality">Hospitality & Hotels</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="projects-grid" id="projectsGrid">
+
+                <!-- 1. Meitra Hospital -->
+                <div class="project-card" data-category="commercial institutional">
+                    <div class="project-img-wrapper">
+                        <img src="images/meitra.jpg" alt="Meitra Hospital Kozhikode" class="project-img">
+                        <div class="project-overlay">
+                            <button class="lightbox-trigger" data-title="Meitra Hospital" data-location="Kozhikode"
+                                data-desc="Complete exterior weather-proofing and interior acoustic hygienic painting for a multi-specialty hospital campus."
+                                data-img="images/meitra.jpg">
+                                <i class="fa-solid fa-expand"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Commercial / Healthcare</span>
+                        <h3>Meitra Hospital</h3>
+                        <p class="project-location"><i class="fa-solid fa-location-dot"></i> Kozhikode</p>
+                    </div>
+                </div>
+
+                <!-- 2. Vadakkekad Juma Masjid -->
+                <div class="project-card" data-category="institutional">
+                    <div class="project-img-wrapper">
+                        <img src="images/juma masjid.png" alt="Vadakkekad Juma Masjid Thrissur" class="project-img">
+                        <div class="project-overlay">
+                            <button class="lightbox-trigger" data-title="Vadakkekad Juma Masjid" data-location="Thrissur"
+                                data-desc="Intricate architectural restoration, dome painting, and exterior weather defense."
+                                data-img="images/juma masjid.png">
+                                <i class="fa-solid fa-expand"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Institutional / Place of Worship</span>
+                        <h3>Vadakkekad Juma Masjid</h3>
+                        <p class="project-location"><i class="fa-solid fa-location-dot"></i> Thrissur</p>
+                    </div>
+                </div>
+
+                <!-- 3. CPIM District Committee Office -->
+                <div class="project-card" data-category="institutional commercial">
+                    <div class="project-img-wrapper">
+                        <img src="images/CPIM Malappuram.jpg" alt="CPIM District Committee Office Malappuram" class="project-img">
+                        <div class="project-overlay">
+                            <button class="lightbox-trigger" data-title="CPIM District Committee Office" data-location="Malappuram"
+                                data-desc="Modern exterior facade painting with terracotta accent panel finishing."
+                                data-img="images/CPIM Malappuram.jpg">
+                                <i class="fa-solid fa-expand"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Institutional / Civic Headquarters</span>
+                        <h3>CPIM District Office</h3>
+                        <p class="project-location"><i class="fa-solid fa-location-dot"></i> Malappuram</p>
+                    </div>
+                </div>
+
+                <!-- 4. Oshin Hotel -->
+                <div class="project-card" data-category="hospitality commercial">
+                    <div class="project-img-wrapper">
+                        <img src="images/oshin.png" alt="Oshin Hotel Calicut" class="project-img">
+                        <div class="project-overlay">
+                            <button class="lightbox-trigger" data-title="Oshin Hotel" data-location="Calicut"
+                                data-desc="Luxury hotel facade illumination coating, lobby Italian stucco textures, and suite guestroom interior finishes."
+                                data-img="images/oshin.png">
+                                <i class="fa-solid fa-expand"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Hospitality & Resort</span>
+                        <h3>Oshin Hotel</h3>
+                        <p class="project-location"><i class="fa-solid fa-location-dot"></i> Calicut</p>
+                    </div>
+                </div>
+
+                <!-- 5. Paragon House -->
+                <div class="project-card" data-category="residential">
+                    <div class="project-img-wrapper">
+                        <img src="images/paragon.jpg" alt="Paragon House Calicut" class="project-img">
+                        <div class="project-overlay">
+                            <button class="lightbox-trigger" data-title="Paragon House" data-location="Calicut"
+                                data-desc="High-end traditional & luxury residence interior woodwork polishing and silk wall coating."
+                                data-img="images/paragon.jpg">
+                                <i class="fa-solid fa-expand"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Luxury Residential Villa</span>
+                        <h3>Paragon House</h3>
+                        <p class="project-location"><i class="fa-solid fa-location-dot"></i> Calicut</p>
+                    </div>
+                </div>
+
+                <!-- 6. Malabar Headquarters -->
+                <div class="project-card" data-category="commercial">
+                    <div class="project-img-wrapper">
+                        <img src="images/malabar.jpg" alt="Malabar Headquarters Calicut" class="project-img">
+                        <div class="project-overlay">
+                            <button class="lightbox-trigger" data-title="Malabar Headquarters" data-location="Calicut"
+                                data-desc="Landmark eco-friendly hillside commercial headquarters external weather shield painting."
+                                data-img="images/malabar.jpg">
+                                <i class="fa-solid fa-expand"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Corporate Headquarters</span>
+                        <h3>Malabar Headquarters</h3>
+                        <p class="project-location"><i class="fa-solid fa-location-dot"></i> Calicut</p>
+                    </div>
+                </div>
+
+                <!-- 7. Crescent Flat -->
+                <div class="project-card" data-category="residential commercial">
+                    <div class="project-img-wrapper">
+                        <img src="images/cresent.png" alt="Crescent Flat Calicut" class="project-img">
+                        <div class="project-overlay">
+                            <button class="lightbox-trigger" data-title="Crescent Flat" data-location="Calicut"
+                                data-desc="High-rise multi-story residential apartment complex cradle painting & waterproofing."
+                                data-img="images/cresent.png">
+                                <i class="fa-solid fa-expand"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">High-Rise Residential</span>
+                        <h3>Crescent Flat</h3>
+                        <p class="project-location"><i class="fa-solid fa-location-dot"></i> Calicut</p>
+                    </div>
+                </div>
+
+                <!-- 8. Morickap Lords 83 -->
+                <div class="project-card" data-category="hospitality">
+                    <div class="project-img-wrapper">
+                        <img src="images/Morickap Lords 83.jpg" alt="Morickap Lords 83 Wayanad" class="project-img">
+                        <div class="project-overlay">
+                            <button class="lightbox-trigger" data-title="Morickap Lords 83" data-location="Wayanad"
+                                data-desc="Hill station resort luxury exterior weather protection and warm wooden texture accents."
+                                data-img="images/Morickap Lords 83.jpg">
+                                <i class="fa-solid fa-expand"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Resort & Hospitality</span>
+                        <h3>Morickap Lords 83</h3>
+                        <p class="project-location"><i class="fa-solid fa-location-dot"></i> Wayanad</p>
+                    </div>
+                </div>
+
+                <!-- 9. Ibrahim Haji House -->
+                <div class="project-card" data-category="residential">
+                    <div class="project-img-wrapper">
+                        <img src="images/Ibrahim Haji House.jpg" alt="Ibrahim Haji House Calicut" class="project-img">
+                        <div class="project-overlay">
+                            <button class="lightbox-trigger" data-title="Ibrahim Haji House" data-location="Calicut"
+                                data-desc="Palatial luxury mansion exterior lighting glow paint & royal interior luster."
+                                data-img="images/Ibrahim Haji House.jpg">
+                                <i class="fa-solid fa-expand"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Grand Residential Mansion</span>
+                        <h3>Ibrahim Haji House</h3>
+                        <p class="project-location"><i class="fa-solid fa-location-dot"></i> Calicut</p>
+                    </div>
+                </div>
+
+                <!-- 10. Meralda Jewels -->
+                <div class="project-card" data-category="commercial">
+                    <div class="project-img-wrapper">
+                        <img src="images/Meralda Jewels.avif" alt="Meralda Jewels Kannur" class="project-img">
+                        <div class="project-overlay">
+                            <button class="lightbox-trigger" data-title="Meralda Jewels" data-location="Kannur"
+                                data-desc="High-end retail jewelry showroom facade with gold texture and interior ambient walls."
+                                data-img="images/Meralda Jewels.avif">
+                                <i class="fa-solid fa-expand"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Luxury Commercial Retail</span>
+                        <h3>Meralda Jewels</h3>
+                        <p class="project-location"><i class="fa-solid fa-location-dot"></i> Kannur</p>
+                    </div>
+                </div>
+
+                <!-- 11. Gokulam Public School -->
+                <div class="project-card" data-category="institutional">
+                    <div class="project-img-wrapper">
+                        <img src="images/Gokulam Public School.jpg" alt="Gokulam Public School Kozhikode" class="project-img">
+                        <div class="project-overlay">
+                            <button class="lightbox-trigger" data-title="Gokulam Public School" data-location="Kozhikode"
+                                data-desc="Vibrant, non-toxic educational campus interior and durable exterior weather protection."
+                                data-img="images/Gokulam Public School.jpg">
+                                <i class="fa-solid fa-expand"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Educational Institution</span>
+                        <h3>Gokulam Public School</h3>
+                        <p class="project-location"><i class="fa-solid fa-location-dot"></i> Kozhikode</p>
+                    </div>
+                </div>
+
+                <!-- 12. Sree Gokulam Medical College -->
+                <div class="project-card" data-category="institutional commercial">
+                    <div class="project-img-wrapper">
+                        <img src="images/Gokulam medical college.jpg" alt="Sree Gokulam Medical College Trivandrum" class="project-img">
+                        <div class="project-overlay">
+                            <button class="lightbox-trigger" data-title="Sree Gokulam Medical College" data-location="Trivandrum"
+                                data-desc="Large-scale campus complex complete exterior paint coating and hospital wing sanitation painting."
+                                data-img="images/Gokulam medical college.jpg">
+                                <i class="fa-solid fa-expand"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Medical & Educational Campus</span>
+                        <h3>Sree Gokulam Medical College</h3>
+                        <p class="project-location"><i class="fa-solid fa-location-dot"></i> Trivandrum</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Quality Quote Footer -->
+            <div class="brochure-footer-quote">
+                <div class="quote-line"></div>
+                <p>Each project reflects our commitment to quality, attention to detail and timely delivery. <i class="fa-solid fa-quote-right red-quote"></i></p>
+                <div class="quote-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo-wrap">
+                    <img src="images/logo.png" alt="PaintHouse Logo" class="footer-logo-img">
+                </div>
+                <p class="footer-desc">
+                    PaintHouse is an award-winning painting contractor specializing in interior & exterior painting across Kerala and India since 1960.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services & Calculator</a></li>
+                    <li><a href="projects.html">Our Works</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">Interior Painting</a></li>
+                    <li><a href="services.html">Exterior Weather Defense</a></li>
+                    <li><a href="services.html">Commercial Turnkey Contracts</a></li>
+                    <li><a href="services.html">Waterproofing Treatments</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Head Office</h4>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>28/E, Manama Building, Mavoor Road, Calicut - 673004</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 944 771 0510 / +91 701 246 7993</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>painthouse.calicut@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; <span id="year">2026</span> PaintHouse Painting Contractors. All Rights Reserved.</p>
+                <a href="#navbar" class="scroll-top-btn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL POP-UP -->
+    <div class="modal-overlay" id="lightboxModal">
+        <div class="modal-card">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-img-box">
+                    <img id="modalImg" src="" alt="Project Landmark View">
+                </div>
+                <div class="modal-info">
+                    <span class="modal-badge" id="modalLocation">Kozhikode</span>
+                    <h2 id="modalTitle">Project Title</h2>
+                    <p id="modalDesc">Detailed description of the project execution and paint specification.</p>
+                    <a href="contact.html" class="btn btn-primary">Inquire For Similar Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="PaintHouse Services & Budget Estimator - Professional interior, exterior, commercial painting, waterproofing, textures, and instant online paint volume & cost calculator.">
+    <title>Services & Paint Calculator | PaintHouse Painting Contractors</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-info">
+                <span><i class="fa-solid fa-award"></i> Award-Winning Painting Contractors Since 1960</span>
+                <span><i class="fa-solid fa-location-dot"></i> Mavoor Road, Calicut, Kerala</span>
+            </div>
+            <div class="top-contact">
+                <a href="tel:9447710510"><i class="fa-solid fa-phone"></i> +91 944 771 0510</a>
+                <a href="tel:7012467993"><i class="fa-solid fa-mobile-screen"></i> +91 701 246 7993</a>
+                <a href="mailto:painthouse.calicut@gmail.com"><i class="fa-solid fa-envelope"></i>
+                    painthouse.calicut@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header Navigation -->
+    <header class="navbar-header" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="brand-logo" aria-label="PaintHouse Painting Contractors">
+                <img src="images/logo.png" alt="PaintHouse Painting Contractors Logo" class="navbar-logo-img">
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link active">Services & Calculator</a>
+                <a href="projects.html" class="nav-link">Our Works</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="contact.html" class="btn btn-primary nav-mobile-cta">
+                    <i class="fa-solid fa-paint-roller"></i> Get Free Quote
+                </a>
+            </nav>
+
+            <!-- Header Action CTA -->
+            <div class="header-actions">
+                <a href="contact.html" class="btn btn-primary btn-glow header-cta-btn">
+                    <i class="fa-solid fa-paint-roller"></i> Get Free Quote
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SUBPAGE HERO BANNER -->
+    <section class="subpage-banner">
+        <div class="container text-center">
+            <div class="section-tag light-tag" style="justify-content: center;">
+                <i class="fa-solid fa-paint-roller"></i> OUR EXPERTISE & BUDGET CALCULATOR
+            </div>
+            <h1 class="subpage-title">Comprehensive Painting Solutions</h1>
+            <p class="subpage-subtitle">
+                From luxury interior finishes to heavy-duty weatherproofing and turnkey commercial megastructures, explore our services or calculate your project cost instantly below.
+            </p>
+        </div>
+    </section>
+
+    <!-- ALL 6 SERVICES SECTION -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="card-icon-box">
+                        <i class="fa-solid fa-paint-brush"></i>
+                    </div>
+                    <h3>Interior Painting</h3>
+                    <p>Silk finishes, royal luster, velvet touch, custom accent walls, and zero-VOC eco-friendly paints for healthy living environments.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-circle-dot"></i> Royale & Velvet Finishes</li>
+                        <li><i class="fa-solid fa-circle-dot"></i> Odorless & Anti-bacterial</li>
+                        <li><i class="fa-solid fa-circle-dot"></i> Wall Texture & Stencil Art</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card highlight-card">
+                    <div class="card-icon-box">
+                        <i class="fa-solid fa-building-user"></i>
+                    </div>
+                    <h3>Exterior Painting</h3>
+                    <p>Heavy-duty elastomeric weather-shield coatings designed to withstand tropical monsoon rains, intense heat, and algae growth.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-circle-dot"></i> High-Rise Rope & Cradle Painting</li>
+                        <li><i class="fa-solid fa-circle-dot"></i> UV-Resistant Color Defense</li>
+                        <li><i class="fa-solid fa-circle-dot"></i> 10-Year Weatherproof Warranty</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="card-icon-box">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3>Commercial & Industrial</h3>
+                    <p>Turnkey painting contracts for corporate headquarters, hospitals, hotels, shopping centers, and educational campuses.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-circle-dot"></i> Fire-Retardant Coatings</li>
+                        <li><i class="fa-solid fa-circle-dot"></i> Epoxy Floor Coatings</li>
+                        <li><i class="fa-solid fa-circle-dot"></i> Scheduled Minimal-Disruption Workflow</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="card-icon-box">
+                        <i class="fa-solid fa-droplet-slash"></i>
+                    </div>
+                    <h3>Waterproofing & Surface Prep</h3>
+                    <p>Advanced masonry diagnosis, crack filling, damp-proofing, and multi-layer elastomeric roof sealing solutions.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-circle-dot"></i> Terrace & Balcony Sealing</li>
+                        <li><i class="fa-solid fa-circle-dot"></i> Anti-Fungal Masonry Treatment</li>
+                        <li><i class="fa-solid fa-circle-dot"></i> Deep Wall Sanding & Primer</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="card-icon-box">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>Decorative Textures</h3>
+                    <p>Artistic wall effects including Italian Stucco, Metallic Glow, Marble Finish, Rustic Grain, and Custom Feature Walls.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-circle-dot"></i> Italian Lime Plasters</li>
+                        <li><i class="fa-solid fa-circle-dot"></i> Metallic & Glitter Layers</li>
+                        <li><i class="fa-solid fa-circle-dot"></i> Handcrafted Art Panels</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="card-icon-box">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3>Color Consultancy</h3>
+                    <p>Professional color scheme recommendations tailored to room lighting, interior decor, architectural aesthetics, and Vastu principles.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-circle-dot"></i> 3D Digital Color Preview</li>
+                        <li><i class="fa-solid fa-circle-dot"></i> Lighting Compatibility Audit</li>
+                        <li><i class="fa-solid fa-circle-dot"></i> On-Site Sample Testing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAINT CALCULATOR & BUDGET ESTIMATOR SECTION -->
+    <section class="calculator-section" id="calculator">
+        <div class="container">
+            <div class="calc-card-wrapper">
+                <div class="calc-header">
+                    <div class="section-tag light-tag">
+                        <i class="fa-solid fa-calculator"></i> BUDGET ESTIMATOR
+                    </div>
+                    <h2>Instant Paint & Cost Estimator</h2>
+                    <p>Enter your surface area details below to get an instant estimate for paint volume (Liters) and project budget.</p>
+                </div>
+
+                <div class="calc-grid">
+                    <!-- Calculator Inputs -->
+                    <div class="calc-inputs-box">
+                        <div class="form-group">
+                            <label for="calcArea"><i class="fa-solid fa-ruler-combined"></i> Total Surface Area (in Square Feet):</label>
+                            <input type="number" id="calcArea" value="1200" min="100" max="50000" step="50">
+                            <small class="help-text">E.g., A standard 2BHK flat interior walls = approx. 1,200 to 1,800 sq.ft.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="calcService"><i class="fa-solid fa-paintbrush"></i> Service & Finish Type:</label>
+                            <select id="calcService">
+                                <option value="interior_standard">Interior Premium Emulsion (₹250/sq.ft)</option>
+                                <option value="exterior_weather">Exterior Weather-Shield Defense (₹265/sq.ft)</option>
+                                <option value="interior_royale">Interior Royale Luxury (Washable — ₹275/sq.ft)</option>
+                                <option value="waterproofing">Waterproofing + Damp-Shield (₹285/sq.ft)</option>
+                                <option value="texture">Artistic Texture & Italian Stucco (₹300/sq.ft)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="calcCoats"><i class="fa-solid fa-layer-group"></i> Number of Coats:</label>
+                            <select id="calcCoats">
+                                <option value="2" selected>2 Coats + 1 Primer (Recommended Standard)</option>
+                                <option value="3">3 Coats Premium Heavy Finish</option>
+                                <option value="1">1 Touch-up Coat</option>
+                            </select>
+                        </div>
+
+                        <button id="calculateBtn" class="btn btn-primary btn-block btn-lg">
+                            <i class="fa-solid fa-calculator"></i> Calculate Estimate
+                        </button>
+                    </div>
+
+                    <!-- Calculator Results Box -->
+                    <div class="calc-results-box" id="calcResultsBox">
+                        <h3><i class="fa-solid fa-chart-pie"></i> Estimated Output</h3>
+
+                        <div class="result-metric">
+                            <span class="metric-label">Estimated Paint Required:</span>
+                            <strong class="metric-val" id="resultLiters">18 - 22 Liters</strong>
+                            <small>Includes Primer + 2 Finish Coats</small>
+                        </div>
+
+                        <div class="result-metric highlight-metric">
+                            <span class="metric-label">Estimated Total Budget Range:</span>
+                            <strong class="metric-val text-crimson" id="resultPrice">₹3,00,000 - ₹3,60,000*</strong>
+                            <small>*Includes material cost, surface preparation & expert labor.</small>
+                        </div>
+
+                        <div class="result-breakdown">
+                            <div class="breakdown-item">
+                                <i class="fa-solid fa-check text-green"></i> Free Color Consultation Included
+                            </div>
+                            <div class="breakdown-item">
+                                <i class="fa-solid fa-check text-green"></i> Dust-free Sanding & Scaffolding
+                            </div>
+                            <div class="breakdown-item">
+                                <i class="fa-solid fa-check text-green"></i> PaintHouse Workmanship Warranty
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="btn btn-secondary btn-block">
+                            <i class="fa-brands fa-whatsapp"></i> Book Site Inspection For Final Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo-wrap">
+                    <img src="images/logo.png" alt="PaintHouse Logo" class="footer-logo-img">
+                </div>
+                <p class="footer-desc">
+                    PaintHouse is an award-winning painting contractor specializing in interior & exterior painting across Kerala and India since 1960.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services & Calculator</a></li>
+                    <li><a href="projects.html">Our Works</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">Interior Painting</a></li>
+                    <li><a href="services.html">Exterior Weather Defense</a></li>
+                    <li><a href="services.html">Commercial Turnkey Contracts</a></li>
+                    <li><a href="services.html">Waterproofing Treatments</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Head Office</h4>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>28/E, Manama Building, Mavoor Road, Calicut - 673004</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 944 771 0510 / +91 701 246 7993</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>painthouse.calicut@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; <span id="year">2026</span> PaintHouse Painting Contractors. All Rights Reserved.</p>
+                <a href="#navbar" class="scroll-top-btn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
