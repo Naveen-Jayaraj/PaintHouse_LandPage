@@ -1353,6 +1353,16 @@ h6 {
     padding: 3rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.contact-info-panel {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .panel-header {
@@ -1378,12 +1388,22 @@ h6 {
     flex-direction: column;
     gap: 1.5rem;
     margin-bottom: 2rem;
+    width: 100%;
+    min-width: 0;
 }
 
 .info-item {
     display: flex;
     align-items: flex-start;
     gap: 1.2rem;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.info-item > div {
+    min-width: 0;
+    flex: 1;
 }
 
 .item-icon-wrap {
@@ -1408,9 +1428,12 @@ h6 {
 
 .info-link {
     font-family: var(--font-heading);
-    font-size: 1.15rem;
+    font-size: clamp(0.9rem, 4vw, 1.15rem);
     font-weight: 700;
     color: #FFFFFF;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    display: block;
 }
 
 .info-link:hover {
@@ -1422,6 +1445,7 @@ h6 {
     font-size: 0.95rem;
     color: var(--text-white);
     line-height: 1.5;
+    word-break: break-word;
 }
 
 /* Embedded Google Map Styling */
@@ -1433,6 +1457,9 @@ h6 {
     overflow: hidden;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
     transition: transform var(--transition-fast), border-color var(--transition-fast);
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .map-card-box:hover {
@@ -1450,10 +1477,14 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 0.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     font-family: var(--font-heading);
     letter-spacing: 0.3px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .map-card-header i {
@@ -1468,6 +1499,7 @@ h6 {
     border-radius: var(--radius-sm);
     border: 1px solid rgba(217, 119, 6, 0.35);
     transition: var(--transition-fast);
+    white-space: nowrap;
 }
 
 .map-open-link:hover {
@@ -1478,8 +1510,11 @@ h6 {
 .map-frame-wrapper {
     position: relative;
     width: 100%;
+    min-width: 0;
     height: 220px;
     background: #000000;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .google-map-iframe {
@@ -1505,6 +1540,7 @@ h6 {
 .social-icons {
     display: flex;
     gap: 0.8rem;
+    flex-wrap: wrap;
 }
 
 .social-icons a {
@@ -1516,6 +1552,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .social-icons a:hover {
@@ -1528,6 +1565,10 @@ h6 {
     padding: 2.5rem;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-lg);
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .contact-form-panel h3 {
@@ -1815,6 +1856,8 @@ h6 {
 
     .contact-card-layout {
         grid-template-columns: 1fr;
+        padding: 2.5rem 1.8rem;
+        gap: 2.5rem;
     }
 
     .footer-container {
@@ -2009,8 +2052,13 @@ h6 {
         word-break: break-word;
     }
 
+    .contact-card-layout {
+        padding: 1.8rem 1.2rem;
+        border-radius: var(--radius-md);
+    }
+
     .contact-form-panel {
-        padding: 1.8rem;
+        padding: 1.8rem 1.2rem;
     }
 
     .modal-body {
@@ -2130,8 +2178,40 @@ h6 {
         margin-bottom: 1.2rem;
     }
 
+    .contact-card-layout {
+        padding: 1.25rem 0.85rem;
+    }
+
+    .contact-form-panel {
+        padding: 1.25rem 0.85rem;
+    }
+
+    .contact-form-panel h3 {
+        font-size: 1.35rem;
+    }
+
+    .contact-form-panel p {
+        font-size: 0.88rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .map-card-header {
+        padding: 0.6rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    .info-item {
+        gap: 0.8rem;
+    }
+
+    .item-icon-wrap {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
     .map-frame-wrapper {
-        height: 260px;
+        height: 220px;
     }
 }
 
@@ -2155,5 +2235,21 @@ h6 {
     .header-actions .btn {
         padding: 0.4rem 0.65rem;
         font-size: 0.78rem;
+    }
+
+    .contact-card-layout {
+        padding: 0.85rem 0.5rem;
+    }
+
+    .contact-form-panel {
+        padding: 0.85rem 0.5rem;
+    }
+
+    .map-card-header {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .map-frame-wrapper {
+        height: 180px;
     }
 }
