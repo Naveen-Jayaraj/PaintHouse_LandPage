@@ -1136,6 +1136,10 @@ h6 {
     padding: 3.5rem;
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-light);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .calc-header {
@@ -1148,10 +1152,22 @@ h6 {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.calc-inputs-box {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .form-group {
     margin-bottom: 1.4rem;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .form-group label {
@@ -1161,12 +1177,15 @@ h6 {
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
     color: var(--primary-navy);
+    word-break: break-word;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     padding: 0.85rem 1.2rem;
     border-radius: var(--radius-md);
     border: 1px solid var(--border-light);
@@ -1175,6 +1194,20 @@ h6 {
     color: var(--text-main);
     background-color: var(--light-bg);
     transition: var(--transition-fast);
+}
+
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%231A2556%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 0.75rem;
+    padding-right: 2.5rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .form-group input:focus,
@@ -1191,6 +1224,7 @@ h6 {
     color: var(--text-muted);
     margin-top: 0.3rem;
     display: block;
+    word-break: break-word;
 }
 
 .calc-results-box {
@@ -1200,6 +1234,10 @@ h6 {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
     border-top: 5px solid var(--accent-red);
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .calc-results-box h3 {
@@ -1766,8 +1804,13 @@ h6 {
         grid-template-columns: 1fr;
     }
 
+    .calc-card-wrapper {
+        padding: 2.5rem 1.8rem;
+    }
+
     .calc-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .contact-card-layout {
@@ -1789,7 +1832,8 @@ h6 {
     }
 
     .navbar-logo-img {
-        height: 44px;
+        height: 42px;
+        max-width: 160px;
     }
 
     .nav-menu {
@@ -1952,6 +1996,19 @@ h6 {
         scroll-snap-align: center;
     }
 
+    .calc-card-wrapper {
+        padding: 1.8rem 1.2rem;
+    }
+
+    .calc-results-box {
+        padding: 1.8rem 1.2rem;
+    }
+
+    .metric-val {
+        font-size: clamp(1.3rem, 5vw, 2rem);
+        word-break: break-word;
+    }
+
     .contact-form-panel {
         padding: 1.8rem;
     }
@@ -1986,6 +2043,24 @@ h6 {
 }
 
 @media (max-width: 576px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .navbar-logo-img {
+        height: 38px;
+        max-width: 135px;
+    }
+
+    .header-actions {
+        gap: 0.5rem;
+    }
+
+    .header-actions .btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.82rem;
+    }
+
     .hero-title {
         font-size: 1.95rem;
     }
@@ -2011,14 +2086,74 @@ h6 {
     }
 
     .calc-card-wrapper {
-        padding: 1.5rem 1.2rem;
+        padding: 1.25rem 0.85rem;
+        border-radius: var(--radius-md);
+    }
+
+    .calc-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .calc-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .calc-header p {
+        font-size: 0.9rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-group label {
+        font-size: 0.88rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 0.75rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .form-group select {
+        padding-right: 2.2rem;
     }
 
     .calc-results-box {
-        padding: 1.8rem 1.2rem;
+        padding: 1.25rem 0.85rem;
+    }
+
+    .calc-results-box h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1.2rem;
     }
 
     .map-frame-wrapper {
         height: 260px;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        padding: 0 0.65rem;
+    }
+
+    .calc-card-wrapper {
+        padding: 1rem 0.6rem;
+    }
+
+    .calc-results-box {
+        padding: 1rem 0.6rem;
+    }
+
+    .metric-val {
+        font-size: 1.2rem;
+    }
+
+    .header-actions .btn {
+        padding: 0.4rem 0.65rem;
+        font-size: 0.78rem;
     }
 }
