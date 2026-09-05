@@ -16,4 +16,4 @@ User-agent: Bingbot
 Allow: /
 
 # XML Sitemap Location
-Sitemap: https://painthouse.in/sitemap.xml
+Sitemap: https://painthouse.net.in/sitemap.xml
