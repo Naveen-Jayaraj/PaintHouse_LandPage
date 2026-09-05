@@ -1,0 +1,19 @@
+# Robots.txt for PaintHouse Painting Contractors
+# Allow all search engine crawlers and web scrapers
+
+User-agent: *
+Allow: /
+Disallow:
+
+# Search Engine Crawlers Specific Guidance
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /
+
+# XML Sitemap Location
+Sitemap: https://painthouse.in/sitemap.xml
